@@ -10,8 +10,8 @@ const Post = ({ title, paragraphs, comments }) => {
       ))}
       <LikeButton />
       <section className="comment-section">
-        {comments.map((comment) => {
-          return <Comment comment={comment} />;
+        {comments.map((comment, index) => {
+          return <Comment comment={comment} key={index} />;
         })}
       </section>
     </article>

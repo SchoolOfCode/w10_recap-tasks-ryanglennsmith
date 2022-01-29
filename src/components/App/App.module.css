@@ -4,7 +4,7 @@
   box-sizing: border-box;
   /* color: white; */
 }
-.bg-img {
+.bgImage {
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -24,7 +24,7 @@
   inset: 0;
   z-index: 2;
 }
-.articles-wrapper {
+.articlesWrapper {
   display: flex;
   flex-direction: column;
   margin: auto;
