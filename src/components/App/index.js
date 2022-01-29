@@ -5,11 +5,11 @@ import Post from "../Post/Post";
 
 function App() {
   return (
-    <div className="App">
-      <div className={css.wrapper}>
+    <div className={css.App}>
+      <div className={css.imgWrapper}>
         <img className={css.bgImage} src="pigeon.jfif" alt="pigeon" />
       </div>
-      <h1>WikiPigeon</h1>
+      <h1 className={css.bigWords}>WikiPigeon</h1>
       <div className={css.articlesWrapper}>
         {articles.map((article, index) => {
           return (

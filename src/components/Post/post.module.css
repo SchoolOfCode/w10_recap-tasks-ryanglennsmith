@@ -1,0 +1,41 @@
+.avatar {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatarImage {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+}
+.postHeader {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  width: 85%;
+  align-self: flex-end;
+}
+.postTitle {
+  font-size: 44px;
+  margin-top: 25px;
+  margin-right: 15px;
+}
+.postFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 15px;
+  /* border: 1px solid red; */
+}
+.commentSection {
+  width: 45%;
+  /* border: 1px solid blue;
+  background-color: blue; */
+  margin-left: 10%;
+}
