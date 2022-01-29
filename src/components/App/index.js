@@ -1,42 +1,29 @@
 import "./App.css";
 import articles from "../../libs/articles";
+import Post from "../Post/Post";
 
 function App() {
   return (
     <div className="App">
+      <div className="wrapper">
+        <img
+          className="bg-img"
+          src="https://images.unsplash.com/photo-1592964378097-281cab4a12a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1982&q=80"
+          alt="pigeon"
+        />
+      </div>
       <h1>WikiPigeon</h1>
-      <article className="post">
-        <h2>{articles[0].title}</h2>
-        {articles[0].paragraphs.map((paragraph) => (
-          <p>{paragraph}</p>
-        ))}
-        <button className="like-button">Like 👍</button>
-        <section className="comment-section">
-          {articles[0].comments.map((comment) => {
-            return (
-              <div className="comment">
-                <h4>{comment.name} says:</h4>
-                <p>{comment.text}</p>
-              </div>
-            );
-          })}
-        </section>
-      </article>
-      <h2>{articles[1].title}</h2>
-      {articles[1].paragraphs.map((paragraph) => (
-        <p>{paragraph}</p>
-      ))}
-      <button className="like-button">Like 👍</button>
-      <section className="comment-section">
-        {articles[1].comments.map((comment) => {
+      <div className="articles-wrapper">
+        {articles.map((article) => {
           return (
-            <div className="comment">
-              <h4>{comment.name} says:</h4>
-              <p>{comment.text}</p>
-            </div>
+            <Post
+              title={article.title}
+              paragraphs={article.paragraphs}
+              comments={article.comments}
+            />
           );
         })}
-      </section>
+      </div>
     </div>
   );
 }
