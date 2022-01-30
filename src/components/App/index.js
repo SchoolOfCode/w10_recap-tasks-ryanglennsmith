@@ -10,6 +10,7 @@ function App() {
         <img className={css.bgImage} src="pigeon.jfif" alt="pigeon" />
       </div>
       <h1 className={css.bigWords}>WikiPigeon</h1>
+      <h2 className={css.littleWords}>a blog by pigeons for pigeons</h2>
       <div className={css.articlesWrapper}>
         {articles.map((article, index) => {
           return (

@@ -1,9 +1,9 @@
 import React from "react";
 
-const LikeButton = () => {
+const LikeButton = ({ className }) => {
   return (
     <>
-      <button className="like-button">Like 👍</button>
+      <button className={className}>Like 👍</button>
     </>
   );
 };

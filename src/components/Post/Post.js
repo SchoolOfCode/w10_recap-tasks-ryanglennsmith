@@ -20,7 +20,7 @@ const Post = ({ title, paragraphs, comments }) => {
         <p>{paragraph}</p>
       ))}
       <div className={css.postFooter}>
-        <LikeButton />
+        <LikeButton className={css.likeButton} />
         <section className={css.commentSection}>
           {comments.map((comment, index) => {
             return <Comment comment={comment} key={index} />;
