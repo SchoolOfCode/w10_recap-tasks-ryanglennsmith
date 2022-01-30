@@ -7,7 +7,7 @@ function PigeonBlog() {
   return (
     <div className={css.page}>
       <div className={css.imgWrapper}>
-        <img className={css.bgImage} src="pigeon.jfif" alt="pigeon" />
+        <img className={css.bgImage} src="pigeon.jpg" alt="pigeon" />
       </div>
       <h1 className={css.bigWords}>WikiPigeon</h1>
       <h2 className={css.littleWords}>a blog for pigeons by pigeons</h2>
