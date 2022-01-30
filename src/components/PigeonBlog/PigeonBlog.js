@@ -1,16 +1,16 @@
-import css from "./App.module.css";
+import css from "./PigeonBlog.module.css";
 
 import articles from "../../libs/articles";
 import Post from "../Post/Post";
 
-function App() {
+function PigeonBlog() {
   return (
-    <div className={css.App}>
+    <div className={css.page}>
       <div className={css.imgWrapper}>
         <img className={css.bgImage} src="pigeon.jfif" alt="pigeon" />
       </div>
       <h1 className={css.bigWords}>WikiPigeon</h1>
-      <h2 className={css.littleWords}>a blog by pigeons for pigeons</h2>
+      <h2 className={css.littleWords}>a blog for pigeons by pigeons</h2>
       <div className={css.articlesWrapper}>
         {articles.map((article, index) => {
           return (
@@ -27,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default PigeonBlog;
