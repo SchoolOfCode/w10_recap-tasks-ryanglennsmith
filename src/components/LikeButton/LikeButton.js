@@ -1,9 +1,16 @@
 import React from "react";
-
-const LikeButton = ({ className }) => {
+import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
+import Button from "@mui/material/Button";
+const LikeButton = ({ handleClick }) => {
   return (
     <>
-      <button className={className}>Like 👍</button>
+      <Button
+        onClick={handleClick}
+        variant="outlined"
+        startIcon={<ThumbUpOutlinedIcon />}
+      >
+        Like
+      </Button>
     </>
   );
 };

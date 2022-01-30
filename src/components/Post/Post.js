@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import LikeButton from "../LikeButton/LikeButton";
 import Comment from "../Comment/Comment";
 import css from "./post.module.css";
+import {
+  Collapse,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemButton,
+  ListItemAvatar,
+  Avatar,
+} from "@mui/material";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
+
 const Post = ({ title, paragraphs, comments }) => {
+  const [likes, setLikes] = useState(0);
+  const [listOpen, setListOpen] = useState(false);
+  const handleLikesClick = () => {
+    setLikes(likes + 1);
+  };
+  const handleListClick = () => {
+    setListOpen(!listOpen);
+  };
   return (
     <article className={css.post}>
       <div className={css.postHeader}>
@@ -16,15 +35,35 @@ const Post = ({ title, paragraphs, comments }) => {
         </div>
       </div>
 
-      {paragraphs.map((paragraph) => (
-        <p>{paragraph}</p>
+      {paragraphs.map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
       ))}
       <div className={css.postFooter}>
-        <LikeButton className={css.likeButton} />
+        <LikeButton handleClick={handleLikesClick} />
+        {likes === 1 && <p className={css.likes}>{likes} pigeon likes this</p>}
+        {likes > 1 && <p className={css.likes}>{likes} pigeons like this</p>}
         <section className={css.commentSection}>
-          {comments.map((comment, index) => {
-            return <Comment comment={comment} key={index} />;
-          })}
+          <List sx={{ width: "100%" }}>
+            <ListItemButton onClick={handleListClick}>
+              <ListItemText primary="Comments" />
+              {listOpen ? <ExpandMore /> : <ExpandLess />}
+            </ListItemButton>
+            <Collapse in={listOpen}>
+              {comments.map((comment, index) => {
+                return (
+                  <ListItem>
+                    <ListItemAvatar>
+                      <Avatar src={comment.avatar}></Avatar>
+                    </ListItemAvatar>
+                    <ListItemText
+                      key={index}
+                      primary={<Comment comment={comment} />}
+                    />
+                  </ListItem>
+                );
+              })}
+            </Collapse>
+          </List>
         </section>
       </div>
     </article>
