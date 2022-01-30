@@ -1,12 +1,26 @@
-.auth {
-  z-index: 99;
+.header {
+  z-index: 10;
   position: sticky;
+  width: 100vw;
   top: 0;
   border: 0;
-  background-color: hotpink;
+  background-color: magenta;
+  display: flex;
+  justify-content: space-between;
+}
+.disappearLarge {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 4px blue;
+  margin-right: 30px;
+  margin-top: -10px;
+  padding-bottom: 10px;
 }
 @media only screen and (min-width: 992px) {
-  .auth {
+  .header {
     background: transparent;
+  }
+  .disappearLarge {
+    display: none;
   }
 }
