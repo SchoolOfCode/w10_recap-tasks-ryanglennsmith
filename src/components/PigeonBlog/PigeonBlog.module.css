@@ -17,7 +17,7 @@
 .bgImage {
   height: 100%;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   object-fit: cover;
   position: relative;
   border: 0;
@@ -31,25 +31,16 @@
   height: 100%;
   width: 100%;
   opacity: 23%;
-  z-index: 22;
+  z-index: 2;
 }
 
 .bigWords {
-  font-family: "Pacifico", cursive;
-  font-size: 6.5rem;
-  z-index: 90;
-  position: relative;
-  width: 25%;
-  height: 25%;
-  top: 0;
-  left: 25px;
-  opacity: 55%;
-  text-shadow: 1px 1px 4px hotpink;
+  display: none;
 }
 .littleWords {
   font-family: "Pacifico", cursive;
   font-size: 1.5rem;
-  z-index: 90;
+  z-index: 9;
   position: relative;
   width: 25%;
   height: 25%;
@@ -62,7 +53,7 @@
   flex-direction: column;
   margin: auto;
   width: 90%;
-  z-index: 90;
+  z-index: 9;
   position: relative;
 }
 
@@ -76,11 +67,25 @@
     flex-direction: column;
     margin: auto;
     width: 50%;
-    z-index: 90;
+    z-index: 9;
     position: relative;
     margin-right: 20px;
   }
   .bigWords {
+    display: block;
+    font-family: "Pacifico", cursive;
+
+    top: 0;
+
+    font-size: 6.5rem;
+    z-index: 9;
+
+    width: 25%;
+    height: 25%;
+
+    opacity: 55%;
+    text-shadow: 1px 1px 4px hotpink;
+
     position: sticky;
     top: 175px;
     left: 25px;

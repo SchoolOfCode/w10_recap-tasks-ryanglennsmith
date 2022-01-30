@@ -14,9 +14,14 @@ function App() {
 
   return (
     <>
-      <div className={css.auth}>
-        <LoginButton />
-        <LogoutButton />
+      <div className={css.header}>
+        <div className={css.auth}>
+          <LoginButton />
+          <LogoutButton />
+        </div>
+        <div className={css.disappearLarge}>
+          <h1 className={css.bigWords}>WikiPigeon</h1>
+        </div>
       </div>
       {isAuthenticated && <PigeonBlog />}
     </>
