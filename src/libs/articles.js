@@ -21,9 +21,21 @@ const articles = [
     average speed of 77.6 mph. Their fastest recorded speed is 92.5 mph.`,
     ],
     comments: [
-      { name: "Loz", text: "Interesting..." },
-      { name: "Liz", text: "Neato!" },
-      { name: "Hamza", text: "Great read." },
+      {
+        name: "Loz",
+        text: "Interesting...",
+        avatar: "pexels-aman-jakhar-1275409.jpg",
+      },
+      {
+        name: "Liz",
+        text: "Neato!",
+        avatar: "pexels-babek-gadirly-3576678.jpg",
+      },
+      {
+        name: "Hamza",
+        text: "Great read.",
+        avatar: "pexels-creapark-596792.jpg",
+      },
     ],
   },
   {
@@ -51,8 +63,16 @@ const articles = [
         Pigeons were a little luxury that almost anyone could enjoy.`,
     ],
     comments: [
-      { name: "Arshi", text: "Wow, that's pretty rad." },
-      { name: "Chris", text: "Get back to work!" },
+      {
+        name: "Arshi",
+        text: "Wow, that's pretty rad.",
+        avatar: "pexels-frans-van-heerden-625410.jpg",
+      },
+      {
+        name: "Chris",
+        text: "Get back to work!",
+        avatar: "pexels-jonas-dautel-943938.jpg",
+      },
     ],
   },
 ];

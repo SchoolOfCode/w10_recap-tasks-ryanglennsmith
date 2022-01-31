@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  overflow-x: hidden;
+  font-size: 10px;
+}
+.page {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.bgImage {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  object-fit: cover;
+  position: relative;
+  border: 0;
+}
+.imgWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 23%;
+  z-index: 2;
+}
+
+.bigWords {
+  display: none;
+}
+.littleWords {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  z-index: 3;
+  position: relative;
+  width: 25%;
+  height: 25%;
+  top: 0;
+  left: 25px;
+  opacity: 85%;
+}
+.articlesWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  z-index: 3;
+  position: relative;
+}
+
+/* respond to desktop-size */
+@media only screen and (min-width: 992px) {
+  .page {
+    flex-direction: row;
+  }
+  .articlesWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    z-index: 3;
+    position: relative;
+    margin-right: 20px;
+  }
+  .bigWords {
+    display: block;
+    font-family: "Pacifico", cursive;
+    top: 0;
+    font-size: 6.5rem;
+    z-index: 3;
+    width: 25%;
+    height: 25%;
+    opacity: 55%;
+    text-shadow: 1px 1px 4px hotpink;
+    position: sticky;
+    top: 175px;
+    left: 25px;
+  }
+  .littleWords {
+    position: fixed;
+    top: 200px;
+    left: 245px;
+  }
+}
