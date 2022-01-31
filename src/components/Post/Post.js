@@ -51,14 +51,11 @@ const Post = ({ title, paragraphs, comments }) => {
             <Collapse in={listOpen}>
               {comments.map((comment, index) => {
                 return (
-                  <ListItem>
+                  <ListItem key={index}>
                     <ListItemAvatar>
                       <Avatar src={comment.avatar}></Avatar>
                     </ListItemAvatar>
-                    <ListItemText
-                      key={index}
-                      primary={<Comment comment={comment} />}
-                    />
+                    <ListItemText primary={<Comment comment={comment} />} />
                   </ListItem>
                 );
               })}
